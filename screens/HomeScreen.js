@@ -7,7 +7,8 @@ import {
   MagnifyingGlassIcon,
   AdjustmentsVerticalIcon,
 } from "react-native-heroicons/outline";
-import Categories from '../components/categories';
+import Categories from '../components/Categories';
+import FeaturedRow from '../components/FeaturedRow';
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -25,7 +26,7 @@ const HomeScreen = () => {
             source={{
               uri: 'https://links.papareact.com/wru'
             }}
-            className="h-7 w-7 bg-gray-300"
+            className="h-7 w-7 bg-gray-300 p-4 rounded-full"
           />
           <View className="flex-1">
             <Text className="font-bold text-gray-400 text-xs">
@@ -54,10 +55,34 @@ const HomeScreen = () => {
       </View>
 
       {/* Body */}
-      <ScrollView>
+      <ScrollView
+        className="bg-gray-100"
+        contentContainerStyle={{
+          paddingBottom: 100,
+        }}
+      >
         {/* Categories */}
-            <Categories />
-        {/* Featured Rows */}
+        <Categories />
+        
+        {/* Featured */}
+        <FeaturedRow 
+          id="123"
+          title="Featured"
+          description="Paid placements from our partners"
+        />
+        {/* Tasty Discounts */}
+        <FeaturedRow
+          id="1234"
+          title="Tasty Discounts"
+          description="Paid placements from our partners"
+        />
+        {/* Offers near you */}
+        <FeaturedRow
+          id="12345"
+          title="Offers near you!"
+          description="Paid placements from our partners"
+        />
+
       </ScrollView>
             
     </SafeAreaView>
