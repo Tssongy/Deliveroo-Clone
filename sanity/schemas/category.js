@@ -10,6 +10,11 @@ export default defineType({
       type: "string",
       title: "Category name",
       validation: (Rule) => Rule.required()
+    },
+    {
+      name: "image",
+      type: "image",
+      title: "Image of Category"
     }
   ],
 })
