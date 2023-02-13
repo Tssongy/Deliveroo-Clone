@@ -43,7 +43,7 @@ export default defineType({
       type: "number",
       title: "Enter a Rating from (1-5 Stars)",
       validation: (Rule) => 
-        Rule.require()
+        Rule.required()
           .min(1)
           .max(5)
           .error("Please enter a Value between 1 and 5")
@@ -60,7 +60,7 @@ export default defineType({
       name: "dishes",
       type: "array",
       title: "Dishes",
-      of: [{ type: "reference", to: [{ type: "dish "}] }]
+      of: [{ type: "reference", to: [{ type: "dish"}] }]
     }
   ],
 })
