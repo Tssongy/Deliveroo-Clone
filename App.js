@@ -23,7 +23,7 @@ export default function App() {
             options={{ presentation: "modal", headerShown: false }}
           />
           <Stack.Screen 
-            name="PreparingOrderScreen" 
+            name="PreparingOrder" 
             component={PreparingOrderScreen} 
             options={{ presentation: 'fullScreenModal', headerShown: false }}
           />
